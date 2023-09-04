@@ -1,8 +1,9 @@
 const BesUrlVar = `https://64f573172b07270f705d3b4d.mockapi.io/`
 
-export async function GetFchFnc(UrlVar: URL) {
+export async function GetFchFnc(UrlVar: String) {
     try {
-        let ResVar = await fetch(BesUrlVar + UrlVar,{ "cache": "force-cache"});
+        let ResVar = await fetch(BesUrlVar + UrlVar,
+            { "cache": "no-cache"});
         if (!ResVar.ok) {
             ApiErrTdoFnc()
         }
